@@ -62,3 +62,61 @@ This updated version includes the following major enhancements:
 6. Open your browser at `http://localhost:8501`. 
 
 *(Note: The SQLite database `sra.db` will be automatically generated upon first run).*
+
+
+
+# 🤖 AI Resume Analysis System
+
+An **AI-powered Resume Analysis System** that automatically analyzes resumes, extracts important candidate information, identifies skills and qualifications, and evaluates how well a resume matches a given job role.
+
+## 🚀 Features
+
+* 📄 Resume upload and text extraction
+* 🤖 AI-based resume analysis
+* 🔍 Automatic skill extraction
+* 🎓 Education and qualification analysis
+* 💼 Work experience identification
+* 📊 Resume scoring and evaluation
+* 🎯 Job-role matching
+* 💡 Skill-gap identification
+* 📝 Resume improvement suggestions
+* 📈 Candidate analysis dashboard
+* 📑 Support for PDF resumes
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **Flask**
+* **Pandas**
+* **NumPy**
+* **Scikit-learn**
+* **NLP**
+* **HTML, CSS, JavaScript**
+* **MySQL**
+* **Machine Learning**
+
+## 🔄 How It Works
+
+1. User uploads a resume.
+2. The system extracts the resume text.
+3. NLP techniques process and analyze the content.
+4. Skills, education, experience, and other details are identified.
+5. The system compares the candidate profile with the selected job role.
+6. A resume score and matching analysis are generated.
+7. The system provides recommendations to improve the resume.
+
+## 🎯 Objective
+
+The main objective of this project is to reduce manual resume screening by using **Artificial Intelligence and Natural Language Processing** to provide faster, consistent, and data-driven resume analysis.
+
+## 🔮 Future Enhancements
+
+* AI-generated resume improvement
+* Multiple job-role recommendations
+* ATS compatibility checking
+* Interview question generation
+* LinkedIn profile analysis
+* Advanced LLM integration
+* Recruiter dashboard
+* Candidate ranking and filtering
+

@@ -1,0 +1,9 @@
+venv/
+venv39/
+__pycache__/
+*.pyc
+sra.db
+App/Uploaded_Resumes/*
+!App/Uploaded_Resumes/.gitkeep
+.DS_Store
+.env

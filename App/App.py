@@ -522,13 +522,13 @@ def run():
                 resume_score = 0
                 
                 ### Predicting Whether these key points are added to the resume
-                if 'Objective' or 'Summary' in resume_text:
+                if 'Objective' in resume_text or 'Summary' in resume_text:
                     resume_score = resume_score+6
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Objective/Summary</h4>''',unsafe_allow_html=True)                
                 else:
                     st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add your career objective, it will give your career intension to the Recruiters.</h4>''',unsafe_allow_html=True)
 
-                if 'Education' or 'School' or 'College'  in resume_text:
+                if 'Education' in resume_text or 'School' in resume_text or 'College' in resume_text:
                     resume_score = resume_score + 12
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Education Details</h4>''',unsafe_allow_html=True)
                 else:

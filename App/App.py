@@ -17,7 +17,11 @@ def load_lottieurl(url: str):
     return r.json()
 import geocoder
 import secrets
-import io,random
+import io, random
+import time
+import datetime
+import base64
+import pandas as pd
 import plotly.express as px # to create visualisations at the admin session
 import plotly.graph_objects as go
 from geopy.geocoders import Nominatim
@@ -174,6 +178,24 @@ def run():
     choice = st.sidebar.selectbox("Choose among the given options:", activities)
     link = '<b>Built with 🤍 by <a href="#" style="text-decoration: none; color: #00e5ff;">Krishnakumar</a></b>' 
     st.sidebar.markdown(link, unsafe_allow_html=True)
+    
+    st.sidebar.markdown('''
+    <div style="display: flex; gap: 15px; margin-top: 10px; margin-bottom: 20px;">
+        <a href="https://github.com/KRISHNAKUMARP20" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="25" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/pkrishnakumar-kk" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" alt="LinkedIn">
+        </a>
+        <a href="mailto:kk6308608@gmail.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="25" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/_kxixh" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="25" alt="Instagram">
+        </a>
+    </div>
+    ''', unsafe_allow_html=True)
+    
     st.sidebar.markdown('''
         <!-- site visitors -->
 
@@ -269,6 +291,9 @@ def run():
 
         # Upload Resume
         st.markdown('''<h5 style='text-align: left; color: #021659;'> Upload Your Resume, And Get Smart Recommendations</h5>''',unsafe_allow_html=True)
+        lottie_upload = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_tjbhbypj.json")
+        if lottie_upload:
+            st_lottie(lottie_upload, height=150, key="upload_animation")
         
         ## file upload in pdf format
         pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
@@ -312,6 +337,9 @@ def run():
                 ## ATS Job Description Match
                 if jd_text:
                     st.subheader("**ATS Match Score 🎯**")
+                    lottie_ats = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_q5pk6p1k.json")
+                    if lottie_ats:
+                        st_lottie(lottie_ats, height=150, key="ats_animation")
                     import re
                     from nltk.corpus import stopwords
                     
@@ -488,6 +516,9 @@ def run():
 
                 ## Resume Scorer & Resume Writing Tips
                 st.subheader("**Resume Tips & Ideas 🥂**")
+                lottie_tips = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_v1yudj6w.json")
+                if lottie_tips:
+                    st_lottie(lottie_tips, height=150, key="tips_animation")
                 resume_score = 0
                 
                 ### Predicting Whether these key points are added to the resume

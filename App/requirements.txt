@@ -91,3 +91,4 @@ validators
 wasabi
 watchdog
 zipp
+streamlit-lottie
